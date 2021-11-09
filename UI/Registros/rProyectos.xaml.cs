@@ -153,6 +153,8 @@ namespace P2_AP1_Junior_20190009.UI.Registros
             proyectos = new Proyectos();
             Cargar();
             LlenarComboTipoDeTareas();
+            descripcionProyectoTextBox.Text = "";
+            proyectoIdTextBox.Text = "0";
         }
 
         private bool Validar()
