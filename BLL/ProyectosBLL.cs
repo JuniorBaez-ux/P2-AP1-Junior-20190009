@@ -31,8 +31,15 @@ namespace P2_AP1_Junior_20190009.BLL
 
             try
             {
-                contexto.Proyectos.Add(proyecto);
-                paso = contexto.SaveChanges() > 0;
+
+                foreach (var item in proyecto.Detalle)
+                {
+                    var tarea = contexto.Tareas.Find(item.TipoId);
+                    tarea.Tiempo += item.Tiempo;
+                }
+
+                if (contexto.Proyectos.Add(proyecto) != null)
+                    paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
             {
@@ -79,12 +86,11 @@ namespace P2_AP1_Junior_20190009.BLL
             Contexto contexto = new Contexto();
             try
             {
-                var proyecto = contexto.Proyectos.Find(id);
+                var proyecto = Buscar(id);
                 if (proyecto != null)
                 {
-                    contexto.Entry(proyecto).State = EntityState.Deleted;
+                    contexto.Proyectos.Remove(proyecto);
                     paso = contexto.SaveChanges() > 0;
-
                 }
             }
             catch (Exception)
