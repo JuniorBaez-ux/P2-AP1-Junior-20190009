@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P2_AP1_Junior_20190009.UI.Registros"
         mc:Ignorable="d"
-        Title="rProyectos" Height="620" Width="750">
+        Title="Registro de proyectos" Height="620" Width="750">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <StackPanel Orientation="Vertical">
@@ -14,7 +14,7 @@
                     <TextBox x:Name="proyectoIdTextBox" Height="25" Width="100" Text="{Binding TipoId}"/>
                     <Button x:Name="BuscarIDButton" Height="30" Width="90" Click="BuscarIDButton_Click" Margin="10,0">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="C:\Users\USER\source\repos\P2-AP1-Junior-20190009\Resources\simbolo-de-interfaz-de-lupa-de-busqueda.png" Stretch="Uniform"/>
+                            <Image Source="/Resources/simbolo-de-interfaz-de-lupa-de-busqueda.png" Stretch="Uniform"/>
                             <Label Content="Buscar"/>
                         </StackPanel>
                     </Button>
@@ -52,7 +52,7 @@
                     <StackPanel VerticalAlignment="Bottom">
                         <Button x:Name="AgregarDetalleButton" Click="AgregarDetalleButton_Click" Width="100" Height="32" >
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="C:\Users\USER\source\repos\P2-AP1-Junior-20190009\Resources\add.png" Height="29" />
+                                <Image Source="/Resources/add.png" Height="29" />
                                 <Label Content="Agregar"/>
                             </StackPanel>
                         </Button>
@@ -72,7 +72,7 @@
                 <StackPanel>
                     <Button x:Name="RemoverFila" Width="120" Height="26" HorizontalAlignment="Left" Click="RemoverFila_Click">
                         <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                            <Image Source="C:\Users\USER\source\repos\P2-AP1-Junior-20190009\Resources\delete.png"/>
+                            <Image Source="/Resources/delete.png"/>
                             <Label Content="Remover Fila" Height="32"/>
                         </StackPanel>
                     </Button>
@@ -82,19 +82,19 @@
             <StackPanel Orientation="Horizontal" Margin="0,10" HorizontalAlignment="Left" VerticalAlignment="Center">
                 <Button x:Name="NuevoButton" Height="70" Width="70" Margin="15,0" VerticalAlignment="Top" VerticalContentAlignment="Bottom" Click="NuevoButton_Click">
                     <StackPanel Orientation="Vertical">
-                        <Image Source="C:\Users\USER\source\repos\P2-AP1-Junior-20190009\Resources\Nuevo.jpeg" Stretch="None"/>
+                        <Image Source="/Resources/Nuevo.jpeg" Stretch="None"/>
                         <Label Content="Nuevo"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="GuardarButton"  Height="70" Width="70" Margin="15,0" VerticalAlignment="Top" VerticalContentAlignment="Bottom" Click="GuardarButton_Click">
                     <StackPanel Orientation="Vertical">
-                        <Image Source="C:\Users\USER\source\repos\P2-AP1-Junior-20190009\Resources\Guardar.jpeg" Stretch="None" />
+                        <Image Source="/Resources/Guardar.jpeg" Stretch="None" />
                         <Label Content="Guardar"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="EliminarButton" Height="70" Width="70" Margin="15,0" VerticalAlignment="Top" VerticalContentAlignment="Bottom" Click="EliminarButton_Click">
                     <StackPanel Orientation="Vertical">
-                        <Image Source="C:\Users\USER\source\repos\P2-AP1-Junior-20190009\Resources\Eliminar.jpeg" Stretch="None" />
+                        <Image Source="/Resources/Eliminar.jpeg" Stretch="None" />
                         <Label Content="Eliminar"/>
                     </StackPanel>
                 </Button>
